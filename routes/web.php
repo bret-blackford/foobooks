@@ -1,9 +1,5 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/test', function() {
     return 'hello from Bret';
 });
@@ -37,3 +33,5 @@ Route::get('/debug', function () {
 
     dump($debug);
 });
+
+Route::get('/{title?}', 'BookController@show');
