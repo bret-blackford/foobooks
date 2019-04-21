@@ -27,14 +27,36 @@ class PracticeController extends Controller {
 
         dump('Added: '.$book->title);
     }
+    
+    public function practice4(){
+        $book = new Book();
+        $books = $book->where('title','LIKE','%Harry Potter%')->get();
+        dump('title like Harry Potter');
+        
+        if($books->isEmpty()){
+            dump('No matches found');
+        } else {
+            foreach ($books as $book){
+                dump($book->title);
+            }
+        }
+    }
 
     /**
      *
      */
     public function practice3() {
-        $translator = new Parser();
-        $translation = $translator->translate('Hello World');
-        dump($translation);
+        $book = new Book();
+        $books = $book->where('published_year','>',1950)->get();
+        dump('published year > 1950');
+        
+        if($books->isEmpty()){
+            dump('No matches found');
+        } else {
+            foreach ($books as $book){
+                dump($book->title);
+            }
+        }
     }
 
     /**
