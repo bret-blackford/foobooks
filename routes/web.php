@@ -4,7 +4,7 @@ Route::get('/test', function() {
     return 'hello from Bret';
 });
 
-
+Route::any('/practiceX', 'PracticeController@practiceX');
 Route::any('/practice/{n?}', 'PracticeController@index');
 Route::get('/view/{title?}', 'BookController@show');
 
