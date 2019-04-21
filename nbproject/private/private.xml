@@ -5,9 +5,11 @@
         <group>
             <file>file:/C:/xampp/htdocs/foobooks/app/Http/Controllers/PracticeController.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/app/Http/Controllers/Controller.php</file>
+            <file>file:/C:/xampp/htdocs/foobooks/app/Book.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/resources/views/show.blade.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/routes/web.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/app/Http/Controllers/BookController.php</file>
+            <file>file:/C:/xampp/htdocs/foobooks/app/Providers/AppServiceProvider.php</file>
         </group>
     </open-files>
 </project-private>
