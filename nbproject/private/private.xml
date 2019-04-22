@@ -8,6 +8,7 @@
             <file>file:/C:/xampp/htdocs/foobooks/app/Book.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/resources/views/show.blade.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/foobooks/database/seeds/DatabaseSeeder.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/app/Http/Controllers/BookController.php</file>
             <file>file:/C:/xampp/htdocs/foobooks/app/Providers/AppServiceProvider.php</file>
         </group>

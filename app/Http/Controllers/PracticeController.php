@@ -28,6 +28,80 @@ class PracticeController extends Controller {
         dump('Added: '.$book->title);
     }
     
+    public function practice14(){
+        $results = Book::where('author','LIKE','%Rowling%')->get();
+        
+        foreach( $results as $book ){
+            dump($book->title . " : " . $book->author);
+            $book->delete();
+        }
+        dump('done with practice14()');
+    }
+    
+    public function practice13() {
+        $results = Book::where('author','=','J.K. Rowling')->get();
+        foreach($results as $book){
+            dump($book->title . " | " . $book->author);
+            
+            //change author of book
+            $auth = 'JK Rowling';
+            $book->author = $auth;
+            
+            //save the changes
+            $book->save();
+        }
+        dump('done with practice13()');
+    }
+    
+    public function practice12(){
+        $results = Book::orderBy('published_year', 'desc')->get();
+        foreach($results as $book){
+            dump($book->published_year . " : " . $book->title . " : " . $book->author);
+        }
+        dump('done with practice12()');
+    }
+    
+    public function practice11(){
+        $results = Book::orderBy('title')->get();
+        foreach($results as $book){
+            dump($book->title);
+        }
+        dump('done with practice11()');
+    }
+    
+    public function practice10(){
+        $results = Book::where('published_year', '>', '1950')->get();
+        foreach($results as $book){
+            dump($book->title);
+        }
+        dump('done with practice10');
+    }
+    
+    public function practice9(){
+        $results = Book::orderBy('updated_at','desc')->limit(2)->get();
+        foreach($results as $book){
+            dump($book->title);
+        }
+        dump('done with practice9');
+    }
+    
+    public function practice6() {
+        $results = Book::where('author','=','J.K. Rowling')->get();
+        foreach($results as $book){
+            dump($book->title);
+        }
+        dump('done with practice6');
+    }
+    
+    public function practice5() {
+        $books = Book::where('author','=', 'Dr. Seuss')->get();
+        foreach($books as $book){
+            dump($book->title);
+        }
+        $books->delete();
+        dump('book deleted');
+    }
+    
     public function practice4(){
         $book = new Book();
         $books = $book->where('title','LIKE','%Harry Potter%')->get();
